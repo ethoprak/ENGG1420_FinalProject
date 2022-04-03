@@ -1,6 +1,7 @@
 package finalproject;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 
 public class _Circle_ extends Shape {
     
@@ -19,6 +20,15 @@ public class _Circle_ extends Shape {
         this.color = color;
         this.borderColor = borderColor;
     
+    }
+    
+    Circle create() {
+        
+        Circle output = new Circle(this.x, this.y, this.r, this.color);
+        output.setStrokeWidth(this.border);
+        output.setStroke(this.borderColor);
+        
+        return output;
     }
     
 }

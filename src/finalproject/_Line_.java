@@ -1,6 +1,7 @@
 package finalproject;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 
 public class _Line_ extends Shape {
     
@@ -17,6 +18,16 @@ public class _Line_ extends Shape {
         this.endY = endY;
         this.border = border;
         this.color = color;
+        
+    }
+    
+    Line create() {
+        
+        Line output = new Line(this.startX, this.startY, this.endX, this.endY);
+        output.setStrokeWidth(this.border);
+        output.setStroke(this.color);
+        
+        return output;
         
     }
     

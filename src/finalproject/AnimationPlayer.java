@@ -15,23 +15,13 @@ public class AnimationPlayer extends Application {
     public void start(Stage primaryStage) {
         
         _Circle_ circle = new _Circle_ (100, 200, 200, 5, Color.RED, Color.DARKRED);
-        // -----------------------------------------------------------------------------------------------
-        Circle test1 = new Circle(circle.x, circle.y, circle.r, circle.color);
-        test1.setStrokeWidth(circle.border);
-        test1.setStroke(circle.borderColor);
+        Circle test1 = circle.create();
         
         _Rectangle_ rectangle = new _Rectangle_ (300, 100, 600, 200, 5, Color.BLUE, Color.DARKBLUE);
-        // -----------------------------------------------------------------------------------------------
-        Rectangle test2 = new Rectangle(rectangle.x, rectangle.y, rectangle.length, rectangle.width);
-        test2.setStrokeWidth(rectangle.border);
-        test2.setFill(rectangle.color);
-        test2.setStroke(rectangle.borderColor);
+        Rectangle test2 = rectangle.create();
         
         _Line_ line = new _Line_ (200, 400, 800, 800, 5, Color.GREEN);
-        // -----------------------------------------------------------------------------------------------
-        Line test3 = new Line(line.startX, line.startY, line.endX, line.endY);
-        test3.setStrokeWidth(line.border);
-        test3.setStroke(line.color);
+        Line test3 = line.create();
         
         Pane pane = new Pane();
         pane.getChildren().add(test1);
